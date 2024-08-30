@@ -1,0 +1,48 @@
+Projeto de Gestão de Produtos
+Desenvolva uma aplicação web utilizando Spring Boot para gerenciar produtos 
+em um estoque. A aplicação deve permitir o cadastro, atualização, remoção e 
+consulta de produtos.
+
+Requisitos Funcionais:
+Cadastro de Produto:
+
+Endpoint para cadastrar novos produtos com informações como nome, descrição, preço e 
+quantidade em estoque.
+Validação para garantir que o nome do produto seja único.
+Consulta de Produto:
+
+Endpoint para listar todos os produtos cadastrados.
+Endpoint para buscar um produto por ID.
+Atualização de Produto:
+
+Endpoint para atualizar informações de um produto existente, incluindo nome, 
+descrição, preço e quantidade.
+Remoção de Produto:
+
+Endpoint para remover um produto pelo seu ID.
+Componentes do Projeto:
+Entity:
+
+Crie uma entidade Produto com campos como id, nome, descricao, preco e quantidade.
+DTO (Data Transfer Object):
+
+Implemente DTOs para as operações de entrada e saída, como ProdutoRequestDTO 
+para criar ou atualizar produtos e ProdutoResponseDTO para retornar informações 
+dos produtos.
+Repository:
+
+Implemente um repositório ProdutoRepository para acesso aos dados do produto,
+ utilizando Spring Data JPA para realizar operações CRUD.
+Service:
+
+Crie uma interface ProdutoService com métodos para lidar com a lógica de 
+negócios dos produtos, como criarProduto, buscarProdutoPorId, atualizarProduto, 
+removerProduto, etc.
+ServiceImpl:
+
+Implemente a interface ProdutoServiceImpl com as operações definidas no 
+ProdutoService, incluindo validações e regras de negócio.
+Controller:
+
+Desenvolva um controlador ProdutoController para expor endpoints RESTful 
+que interagem com a aplicação, utilizando os DTOs para entrada e saída de dados.
